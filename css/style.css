@@ -1,0 +1,539 @@
+@charset "utf-8";
+/* CSS Document */
+html,body{
+    font-family: 'open_sansregular', Georgia, Times;
+	width:100%;
+	height:100%;
+    font-size: 12px;
+    text-align: center;
+}
+
+#loaded {
+    display: none;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#loading {
+    width: 100%;
+    height: 100%;
+    background: #FFF url(../images/loading.gif) no-repeat center center;
+    text-indent: -9999px;
+}
+
+em {
+    font-family: 'open_sansitalic', Georgia, Times;
+    
+}
+
+strong {
+    font-family: 'open_sansbold', Georgia, Times;
+}
+
+em strong, strong em {
+    font-family: 'open_sansbold_italic', Georgia, Times;
+}
+
+h1, h2 {
+    font-family: Georgia, Times;
+}
+
+h1 {
+    font-size: 6.667em;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+p {
+    padding-bottom: 3.000em;
+    font-size: 1.333em;
+}
+
+/* Stuff bar styling */
+.stuff {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10001;
+    text-align: left;
+}
+
+.stuffLogo {
+    float: left;
+    margin-top: 0.333em;
+    margin-right: 1.667em;
+}
+
+.stuff #stuffBar, .stuff #stuffSecondBar {
+    float: left;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.stuff #stuffBar {
+    background: transparent url(../images/all-site-nav-bg.gif) repeat center center;
+    font-size: 1.167em;
+}
+
+.stuff #stuffSecondBar {
+    background-color: #D02320;
+    font-size: 1.000em;
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.stuff #stuffBarList, .stuff #stuffSecondBarList {
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.stuff .stuffBarSections a {
+    display: inline-block;
+    padding: 11px 6px;
+    text-decoration: none;
+}
+
+.stuff .stuffBarSections li:first-child a {
+    padding-left: 0;
+}
+
+.stuff #stuffBar a {
+    display: block;
+    color: #666;
+}
+
+.stuff #stuffBar a:hover {
+    color: #999;
+}
+
+.stuff #stuffBarList .navSecActive a {
+    background-color: #D02320;
+    color: #FFF;
+}
+
+.stuff #stuffBarList .navSecActive a:hover {
+    color: #FFF;
+}
+
+.stuff #stuffSecondBar a {
+    color: #FFF;
+}
+
+.stuff #stuffSecondBar a:hover {
+    color: #EEAEAE;
+}
+
+.stuff li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+/* Top nav hover colours */
+
+.stuff #stuffBar .stuffBarSections a:hover {
+    padding-top: 7px;
+}
+#navSec_national a:hover {
+    border-top: 4px solid #256091;
+}
+#navSec_world a:hover {
+    border-top: 4px solid #1272B4;
+}
+#navSec_business a:hover {
+    border-top: 4px solid #0083D7;
+}
+#navSec_tech a:hover {
+    border-top: 4px solid #00824A;
+}
+#navSec_sport a:hover {
+    border-top: 4px solid #D02320;
+}
+#navSec_entertainment a:hover {
+    border-top: 4px solid #9C1A87;
+}
+#navSec_lifestyle a:hover {
+    border-top: 4px solid #D11242;
+}
+#navSec_travel a:hover {
+    border-top: 4px solid #08AFB7;
+}
+#navSec_motoring a:hover {
+    border-top: 4px solid #999;
+}
+
+/* Feature styling */
+
+.navigation{
+	position:fixed;
+	z-index:1;
+	top:100px;
+}
+.navigation li{
+	color:#333333;
+	display:block;
+	padding: 0 10px;
+	line-height:2.500em;
+	margin-bottom:2px;
+	font-weight:bold;
+	-webkit-transition: all .2s ease-in-out;
+	border-bottom:1px solid black;
+	text-align:left;
+	width:4.417em;
+}
+.navigation li:hover,.active{
+	font-size:2.083em;
+	cursor:pointer;
+	width:100px!important;
+}
+
+.slide{
+	background-attachment: fixed;
+	width:100%;
+	/*height:100%;*/
+	position: relative;
+    float: left;
+}
+.wrapper{
+	margin:0 auto;
+	position:relative;
+    width: 100%;
+    max-width: 610px;
+}
+.clearer {
+    clear: both;
+}
+.slideno{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	font-size:8.333em;
+	font-weight:bold;
+	color:rgba(255,255,255,0.3);
+}
+.caption {
+    font-size: 1em; 
+    font-family: Arial, Georgia, sans-serif;
+    padding-top: 8px;
+}
+.button{
+	display:block;
+	width:4.167em;
+	height:4.167em;
+	position:absolute;
+	bottom:0px;
+	left:50%;
+	background-color:#333333;
+	background-image:url(../images/arrow.png);
+}
+.button:hover{
+	background-color:#494949;
+	cursor:pointer;
+}
+
+/******************************
+ SLIDE 1 
+*******************************/
+#slide1 {
+    margin-top: 6.333em; /* Extra space for Stuff sticky nav */
+}
+
+#slide1 .title, #slide1 .sideNote {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+#slide1 .title {
+    margin-top: 32.500em;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#slide1 .sideNote {
+    margin-top: 7.500em;
+}
+
+#slide1 .title header, #slide1 .sideNote h2 {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+    color: #FFF;
+    text-shadow: 1px 1px #000;
+}
+
+#slide1 .title p {
+    font-size: 1.167em;
+}
+
+#socialButtons .gig-share-bar-container {
+    width: 100%;
+    max-width: 356px;
+    margin: 0 auto 20px;
+}
+
+#slide1 {
+    background: transparent url(../images/slide1/zeus-tree.jpg) no-repeat fixed center center;
+    height: 160.667em;
+    background-size: 100% auto;
+}
+
+/******************************
+ SLIDE 2 
+*******************************/
+#slide2{
+	background-color:#FFF;
+}
+
+#slide2 .wrapper {
+    padding-top: 5.167em;
+}
+
+/******************************
+ SLIDE 3 
+*******************************/
+#slide3 .wrapper {
+    width: auto;
+    max-width: 100%;
+}
+#slide3 img:first-child{
+	position:absolute;
+top: 700px;
+left: 300px;
+}
+#slide3 img:nth-child(2){
+	position:absolute;
+	top:100px;
+	left:100px;
+}
+#slide3 img:nth-child(3){
+	position:absolute;
+	top:150px;
+	left:300px;
+}
+#slide3 img:nth-child(4){
+	position:absolute;
+	top:450px;
+	left:300px;
+}
+#slide3 img:nth-child(5){
+	position:absolute;
+	top:200px;
+	right:300px;
+}
+#slide3 img:nth-child(6){
+	position:absolute;
+	top:100px;
+	right:300px;
+}
+#video1 {
+    width: 100%;
+}
+/******************************
+ SLIDE 4 
+*******************************/
+
+#slide4 {
+    padding-bottom: 25px;
+}
+
+#slide4 .wrapper {
+    max-width: 920px;
+    width: 100%;
+    margin: 3.750em auto 0;
+}
+
+#slide4 .contentBlk {
+    display: inline-block;
+    vertical-align: top;
+    width: 18.833em;
+    height: 13.500em;
+    margin: 0 2%;
+    padding: 145px 0 8px;
+}
+
+#slide4 #unqFootball {
+    background: transparent url('../images/slide4/circle-icon-football.png') no-repeat top center;
+}
+
+#slide4 #unqTabletennis {
+    background: transparent url('../images/slide4/circle-icon-table-tennis.png') no-repeat top center;
+}
+
+#slide4 #unqBowling {
+    background: transparent url('../images/slide4/circle-icon-bowling.png') no-repeat top center;
+}
+
+#slide4 #unqYoga {
+    background: transparent url('../images/slide4/circle-icon-yoga.png') no-repeat top center;
+}
+
+#slide4 #unqNetball {
+    background: transparent url('../images/slide4/circle-icon-netball.png') no-repeat top center;
+}
+
+#slide4 #unqRowing {
+    background: transparent url('../images/slide4/circle-icon-rowing.png') no-repeat top center;
+}
+
+#slide4 h2 {
+    font-size: 2.167em;
+    font-family: 'open_sansregular', Georgia, Times;
+    padding-bottom: 10px;
+}
+
+#slide4 p {
+    font-size: 1.167em;
+}
+
+/******************************
+ SLIDE 5
+*******************************/
+#slide5 {
+    background: transparent url(../images/slide5/fernanda-bowling.jpg) no-repeat fixed center center;
+    background-size: 100% auto;
+    height: 77.188em;
+}
+
+/******************************
+ SLIDE 6
+*******************************/
+
+#slide6 .wrapper { 
+    padding-bottom: 40px;
+}
+
+#slide6 img {
+    width: 100%;
+    max-width: 620px;
+}
+
+/******************************
+ SLIDE 7
+*******************************/
+
+#slide7 .wrapper {
+    width: auto;
+    max-width: 100%;
+}
+
+#video2 {
+    width: 100%;
+}
+
+/******************************
+ SLIDE 8
+*******************************/
+
+#slide8 {
+	background-image: url(../images/slide9/slide9-bg.png);
+    background-size: cover;
+}
+
+#slide8 .wrapper {
+    width: 100%;
+    margin-top: 1.250em;
+}
+
+#slide8 .wrapper p {
+    color: #FFF;
+    font-size: 1em;
+    padding: 40px 0 45px;
+}
+
+
+/* Smaller screen media queries */
+@media all and (max-width: 71.875em) { /* 1150px */
+    #slide1 {
+        height: 133.333em;
+    }
+    #slide5 {
+        background-image: url(../images/slide5/fernanda-bowling-sml.jpg);
+        height: 71.875em;
+    }
+    #slide8 {
+        margin-top: 6.667em;
+        margin-bottom: 5em;
+    }
+}
+
+@media all and (max-width: 61.563em) { /* 985px */
+    #slide1 {
+        height: 50.667em;
+    }
+    #slide1 .title {
+        margin-top: 14.333em;
+    }
+    #slide8 .wrapper p {
+        padding: 130px 0 135px;
+    }
+    #slide5 {
+        height: 61.563em;
+    }
+} 
+
+@media all and (max-width: 45em) { /* 720px */
+    .stuff {
+        position: absolute;
+    }
+    .stuffBarSections li, #stuffBar #stuffSecondBar {
+        display: none;
+    }
+    .stuff #stuffBarList li.navSecActive {
+        display: block;
+    }
+    .stuffBarSections {
+        float: left;
+    }
+    #slide1 {
+        height: 35.333em;
+        margin-top: 3.250em;
+                background-position: 100% 100%!IMPORTANT;
+        background-attachment: scroll!IMPORTANT;
+    }
+    #slide1 .title {
+        margin-top: 3em;
+    }
+    #slide1 .sideNote {
+        margin-top: 2.5em;
+    }
+    h1 {
+        font-size: 3.333em;
+    }
+    #slide1 .sideNote h2 {
+        font-size: 2.083em
+    }
+    #slide5 {
+        height: 30em;
+        background-position: top center!IMPORTANT;
+        background-attachment: scroll!IMPORTANT;
+    }
+}
+
+@media all and (max-width: 30em) { /* 480px */
+    p {
+        font-size: 1.2em;
+    }
+    #slide1 {
+        height: 20.333em;
+    }
+    #slide1 .title {
+        margin-top: 0.833em;
+    }
+    h1 {
+        font-size: 2.500em;
+    }
+    #slide1 .sideNote h2 {
+        font-size: 1.500em;
+    }
+    #slide5 {
+        height: 21em;
+    }
+}
+
+/*  Deactivated features*/
+.navigation, .button, .slideno {
+    display: none; /* Deactivated features for this particular project */
+}
